@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar' 
-import Herosection from '../../components/Herosection/Herosection'
+import Herosection from '../../components/herosection/Herosection'
 import Actionline from '../../components/Actionline/Actionline.jsx'
 import FeaturedTitle from '../../components/featuredtitle/featuredtitle'
 import CurrentDiv from '../../components/currentdiv/currentdiv'
