@@ -1,0 +1,44 @@
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.4) 0%, transparent 70%);
+  border: 1px solid rgba(240, 20, 126, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
+}
+
+/* Hide default cursor on desktop */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  
+  a, button, .nav-link, .skew-btn, .filter-tab, .game-card {
+    cursor: none;
+  }
+}
+
+/* On hover of interactive elements, scale up the glow */
+body:has(a:hover, button:hover, .nav-link:hover) .cursor-glow {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(240, 20, 126, 0.3) 0%, transparent 70%);
+  border-color: rgba(240, 20, 126, 0.5);
+  transition: width 0.3s ease, height 0.3s ease;
+}

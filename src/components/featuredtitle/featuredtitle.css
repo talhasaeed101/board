@@ -1,0 +1,131 @@
+.featured-games {
+  position: relative;
+  padding: 80px 0;
+  background: #0d0b25;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 52px;
+  color: #fff;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.2s;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #9b4dff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.4s;
+}
+
+.featured-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.featured-image-container {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.featured-svg {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+  transition: transform 0.5s ease;
+  animation: float 6s infinite ease-in-out;
+}
+
+.featured-svg:hover {
+  transform: scale(1.02);
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .section-title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 992px) {
+  .featured-games {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 32px;
+  }
+  .featured-image-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-games {
+    padding: 40px 0;
+  }
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .section-subtitle {
+    font-size: 14px;
+  }
+  .featured-image-container {
+    padding: 0 10px;
+  }
+}
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
