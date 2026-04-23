@@ -1,5 +1,5 @@
 import React from 'react';
-import './FooterSection.css';
+import './Footersection.css';
 
 const FooterSection = () => {
   return (
@@ -13,10 +13,11 @@ const FooterSection = () => {
                 <img src="/Images/mainlogo1.svg" alt="Board Logo" className="footer-logo-img" />
                 <span className="logo-text">board</span>
               </div>
+              
               <p className="footer-description">
                 A well-designed gaming header often incorporates elements such as game characters, iconic symbols, vibrant colors, and dynamic visuals.
               </p>
-              
+
             </div>
 
             <div className="footer-links-grid">
